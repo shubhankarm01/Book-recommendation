@@ -1,0 +1,50 @@
+create database book;
+
+use book;
+
+create table users(
+    user_id INT,
+    location VARCHAR(150),
+    age INT 
+    );
+
+LOAD DATA
+INFILE 'C:/Users/admin/Google Drive/Data science/Projects for practice/Book recommendation/Data/Users.csv'
+INTO TABLE users
+CHARACTER SET latin1
+FIELDS TERMINATED BY ';'
+ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 1 LINES;
+
+create table books(
+    book_id VARCHAR(50),
+    title VARCHAR(200),
+    author VARCHAR(200),
+    YOP INT,
+    publisher VARCHAR(200)
+    );
+
+LOAD DATA
+INFILE 'C:/Users/admin/Google Drive/Data science/Projects for practice/Book recommendation/Data/Books.csv'
+INTO TABLE books
+CHARACTER SET latin1
+FIELDS TERMINATED BY ';'
+ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 1 LINES;
+
+create table ratings(
+    user_id INT,
+    book_id VARCHAR(50),
+    book_rating INT
+    );
+
+LOAD DATA
+INFILE 'C:/Users/admin/Google Drive/Data science/Projects for practice/Book recommendation/Data/Book ratings.csv'
+INTO TABLE ratings
+CHARACTER SET latin1
+FIELDS TERMINATED BY ';'
+ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 1 LINES;
