@@ -1,4 +1,4 @@
-# Book-recommendation
+# Book recommendation
 
 The project's objective was to create different book recommendation systems based on user-item rating data.
 
